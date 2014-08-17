@@ -1,0 +1,20 @@
+;;;; -*- mode: lisp -*-
+(:author "LimaJS"
+ :theme "limajs"
+ :title "Communidad LimaJS"
+ :domain "http://limajs.puercopop.com"
+ :repo "/home/puercopop/Projects/NotLimaJS"
+ :deploy-dir "/home/puercopop/www/limajs"
+ ;; :repo "/home/puercopop/src/notlimajs"
+ ;; :deploy-dir "/home/puercopop/www/limajs"
+ :routing ((:feed "~A.html")
+           (:numeric-index "~D")
+           (:month-index "fecha/~A")
+           (:tag-index "tag/~A.html")
+           (:post "blog/~A")
+           (:event "eventos/~A")
+           (:shout-outs "shout-out/~A"))
+ :feeds ()
+ :plugins ((static-pages)
+           (events)
+           (shout-outs)))
