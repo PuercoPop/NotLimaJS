@@ -4,17 +4,21 @@
  :title "Communidad LimaJS"
  :domain "http://limajs.puercopop.com"
  :repo "/home/puercopop/Projects/NotLimaJS"
- :deploy-dir "/home/puercopop/www/limajs"
+ :staging-dir "/home/puercopop/tmp/blog/"
+ :deploy-dir "/home/puercopop/tmp/limajs/"
  ;; :repo "/home/puercopop/src/notlimajs"
  ;; :deploy-dir "/home/puercopop/www/limajs"
  :routing ((:feed "~A.html")
-           (:numeric-index "~D")
-           (:month-index "fecha/~A")
            (:tag-index "tag/~A.html")
-           (:post "blog/~A")
-           (:event "eventos/~A")
-           (:shout-outs "shout-out/~A"))
+           (:post "blog/~A.")
+           (:event "eventos/~A.")
+           (:event-index "todos-los-eventos/~A")
+           (:shout-outs "shout-outs/~A"))
  :feeds ()
- :plugins ((static-pages)
-           (events)
+ :lang "es"
+ :sitenav ((:url "http://limajs.org" :name "home")
+            (:url "http://twitter.com/js_peru" :name "Twitter")
+            (:url "http://github.com/limaJS" :name "Github"))
+ :plugins ((events)
+           (static-pages)
            (shout-outs)))
